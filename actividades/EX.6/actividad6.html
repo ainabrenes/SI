@@ -9,22 +9,21 @@
     <form>
         <fieldset>
             <legend>Rellenar:</legend>
-            <input type="radio" id="Ingles" name="ingles">
+            <input type="radio" id="Ingles" name="asignatura" value="inglés">
             <label for="Ingles">Inglés</label><br>
-            <input type="radio" id="Aleman" name="aleman">
+            <input type="radio" id="Aleman" name="asignatura" value="Aleman">
             <label for="Aleman">Alemán</label><br>
-            <input type="radio" id="Frances" name="Frances">
+            <input type="radio" id="Frances" name="asignatura" value="Frances">
             <label for="Frances">Francés</label>
             <br>
-            <br>
             <select name="USB" id="USB">
-            <option value="">USB</option>
+            <option value="USB">USB</option>
             </select>
             <br>
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name"><br>
             <label for="name2">Apellidos:</label>
-            <input type="text" id="name2" name="name2">
+            <input type="text" id="name2" name="name">
         </fieldset>
         <fieldset>
         <legend>Indique sus preferencias porfavor:</legend >
@@ -33,10 +32,10 @@
                 <option value="Hombre">Hombre</option>
             </select>
         <br>
-            <input type="checkbox" id="hombre" name="hombre" >
-            <label for="genero"> Hombre</label><br>
-            <input type="checkbox" id="mujer" name="mujer" >
-            <label for="genero"> Mujer</label><br>
+            <input type="checkbox" id="hombre" name="genero" value="hombre">
+            <label for="hombre"> Hombre</label><br>
+            <input type="checkbox" id="mujer" name="genero" value="mujer" >
+            <label for="mujer"> Mujer</label><br>
         <p>Elija una fecha:<input type="date"></p>
         </fieldset>
     </form>
