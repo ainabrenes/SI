@@ -1,0 +1,126 @@
+.article1{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:1;
+    grid-row: 1;
+    transition: transform 0.5s;
+}
+.article2{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:2;
+    grid-row: 1;
+    transition: transform 0.5s;
+
+}
+.article3{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:3;
+    grid-row: 1;
+    transition: transform 0.5s;
+
+}
+.article4{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:4;
+    grid-row: 1;
+    transition: transform 0.5s;
+
+}
+.article5{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:5;
+    grid-row: 1;
+    transition: transform 0.5s;
+
+}
+.article6{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:1;
+    grid-row: 2;
+    transition: transform 0.5s;
+
+}
+.article7{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:2;
+    grid-row: 2;
+    transition: transform 0.5s;
+
+}
+.article8{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:3;
+    grid-row: 2;
+    transition: transform 0.5s;
+
+}
+.article9{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:4;
+    grid-row: 2;
+    transition: transform 0.5s;
+
+}
+.article10{
+    border: 0.5px gray solid;
+    width: 320px;
+    grid-column:5;
+    grid-row: 2;
+    transition: transform 0.5s;
+
+}
+
+.articulos{
+    display: grid;
+    grid-template-columns:5;
+    grid-template-rows:2;
+    grid-gap:20px;
+    font-family: arial;
+    margin-bottom: 20px;
+    
+}
+.article1:hover {
+    transform: scale(1.05);
+}
+.article2:hover {
+    transform: scale(1.05);
+}
+.article2:hover {
+    transform: scale(1.05);
+}
+.article3:hover {
+    transform: scale(1.05);
+}
+.article4:hover {
+    transform: scale(1.05);
+}
+.article5:hover {
+    transform: scale(1.05);
+}
+.article6:hover {
+    transform: scale(1.05);
+}
+.article7:hover {
+    transform: scale(1.05);
+}
+.article8:hover {
+    transform: scale(1.05);
+}
+.article9:hover {
+    transform: scale(1.05);
+}
+.article10:hover {
+    transform: scale(1.05);
+}
+
+img{
+    width: 320px;
+}
