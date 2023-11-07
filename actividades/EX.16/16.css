@@ -1,8 +1,6 @@
 .article{
     border: 0.5px gray solid;
     width: 320px;
-    /* grid-column:1; */
-    /* grid-row: 1; */
     transition: transform 0.5s;
 }
 
