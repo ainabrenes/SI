@@ -1,3 +1,4 @@
+body{font-family: Arial;}
 header{
     background-color: #4498C3;
     color:white;
@@ -24,32 +25,126 @@ a:hover{
     color: red;
     top: 20px;
 }
-h1{
-    align-self: center;
-}
-input{
-    align-self: center;
-}
-div{
-    align-self: center;
-}
+h1{align-self: center;}
+input{align-self: center;}
+div{align-self: center;}
 @media screen and (max-width: 1000px) {
-    
     div::after {
-        content: "☰";
-
-        font-size: 25px;
-    
-    }
-    ul{
-        display: none;
-    }
-  }
+    content: "☰";font-size: 25px;}
+    ul{display: none;}}
   @media screen and (max-width: 800px) {
-    
-    
-    input{
-        display: none;
-    }
-  }
+    input{display: none;}}
+main{
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: arial;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+}
+.primero{
+    grid-column: 1;
+    grid-row:1/2;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+}
+.texto1{
+    grid-column: 1;
+    width: 1000px;
+}
+#A{
+    grid-column: 2;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+}
+.segundo{
+    grid-column: 1;
+    grid-row: 2/3;
+    display: flex;
+    justify-content:space-between;
+    align-self: center;
+    flex-direction: row;
+}
+.opciones{
+    margin-top: 20px;
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+#B{
+    color: #69AFE1;
+}
+#icono{
+    width: 50px;
+    height: 50px;
 
+}
+img{
+    width: 300px;
+    height: 250px;
+    border-radius: 5%;
+}
+.tercero{
+    grid-column: 1;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: row;
+}
+.Portfolio{
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+section{
+    margin-top: 50px;
+}
+.cuarto{
+    text-align: center;
+    grid-column: 1;
+    grid-row: 4/5;
+}
+footer{
+    background-color: grey;
+    grid-column: 1;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows:2fr;
+    
+}
+.horizontal{
+    grid-column: 1/4;
+    grid-row: 2;
+    text-align: center;
+}
+.columnas{
+    grid-row: 1;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: row;
+    text-align: center;
+    width: 1300px;
+}
+.CIDE{
+    width: 200px;
+    text-align: center;
+
+}
+.colocar{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#redes{
+    width: 20px;
+    height: 20px;
+}
