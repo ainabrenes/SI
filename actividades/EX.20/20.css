@@ -41,6 +41,7 @@ main{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    margin-bottom: 20px;
 }
 .primero{
     grid-column: 1;
@@ -112,12 +113,14 @@ section{
     grid-row: 4/5;
 }
 footer{
-    background-color: grey;
+    background-color: #444546;
     grid-column: 1;
     grid-row: 4/5;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows:2fr;
+    color:white;
+    margin-top: 20px;
     
 }
 .horizontal{
@@ -132,12 +135,12 @@ footer{
     justify-content: space-between;
     align-self: center;
     flex-direction: row;
-    text-align: center;
+    text-align: left;
     width: 1300px;
 }
 .CIDE{
     width: 200px;
-    text-align: center;
+    text-align: left;
 
 }
 .colocar{
@@ -145,6 +148,13 @@ footer{
     margin-right: 200px;
 }
 #redes{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+}
+.cuarto{
+    
+    width: 60%;
+}
+.cuadros{
+    text-align: left;
 }
