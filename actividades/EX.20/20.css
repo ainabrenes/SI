@@ -1,0 +1,176 @@
+body{font-family: Arial;}
+header{
+    background-color: #4498C3;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Arial;
+}
+nav{
+    align-self: center;  
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color:white;
+    transition: color 3s ease;
+    position: relative;
+    transition: top 3s ease;
+}
+a:hover{
+    color: red;
+    top: 20px;
+}
+h1{align-self: center;}
+input{align-self: center;}
+div{align-self: center;}
+@media screen and (max-width: 1000px) {
+    .hamb::after {
+    content: "☰";font-size: 25px;}
+    ul{display: none;}}
+  @media screen and (max-width: 800px) {
+    input{display: none;}}
+main{
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: arial;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    margin-bottom: 20px;
+}
+.primero{
+    grid-column: 1;
+    grid-row:1/2;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+}
+.texto1{
+    grid-column: 1;
+    width: 1000px;
+}
+#A{
+    grid-column: 2;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+}
+.segundo{
+    grid-column: 1;
+    grid-row: 3/4;
+    display: flex;
+    justify-content:space-between;
+    align-self: center;
+    flex-direction: row;
+}
+.opciones{
+    margin-top: 20px;
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+#B{
+    color: #4199F4;
+    font-weight: bold;
+}
+#icono{
+    width: 50px;
+    height: 50px;
+
+}
+img{
+    width: 300px;
+    height: 250px;
+    border-radius: 5%;
+}
+.tercero{
+    grid-column: 1;
+    grid-row: 5/6;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: row;
+}
+.Portfolio{
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+section{
+    margin-top: 50px;
+}
+.cuarto{
+    text-align: center;
+    grid-column: 1;
+    grid-row: 6/7;
+}
+footer{
+    background-color: #444546;
+    grid-column: 1;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows:2fr;
+    color:white;
+    margin-top: 20px;
+    
+}
+.horizontal{
+    grid-column: 1/4;
+    grid-row: 2;
+    text-align: center;
+}
+.columnas{
+    grid-row: 1;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: row;
+    text-align: left;
+    width: 1300px;
+}
+.CIDE{
+    width: 200px;
+    text-align: left;
+
+}
+.colocar{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#redes{
+    width: 30px;
+    height: 30px;
+}
+.cuadros{
+    text-align: left;
+    font-weight: bold;
+}
+.cuarto{
+    align-items: center;
+}
+button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color:#4199F4;
+    width: 1200px;
+    color: white;
+}
+.titulo1{
+    grid-column: 1;
+    grid-row: 2/3;
+}
+.titulo2{
+    grid-column: 1;
+    grid-row: 4/5;
+}
