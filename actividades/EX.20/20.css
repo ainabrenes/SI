@@ -33,7 +33,7 @@ div{align-self: center;}
 @media screen and (max-width: 800px) {
     input{display: none;}}
 
-
+    
 .margenes{
     margin-left: 200px;
     margin-right: 200px;
@@ -112,7 +112,6 @@ section{
 }
 .cuarto{
     text-align: center;
-
     grid-column: 1;
     grid-row: 6/7;
 }
@@ -147,10 +146,8 @@ footer{
     text-align: left;
 
 }
-.colocar{
-    margin-left: 200px;
-    margin-right: 200px;
-}
+
+
 #redes{
     width: 30px;
     height: 30px;
