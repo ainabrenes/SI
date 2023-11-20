@@ -7,8 +7,7 @@ header{
     align-self: center;
     flex-direction: row;
     padding-left: 20px;
-    padding-right: 20px;
-    font-family: Arial;
+    padding-right: 20px;  
 }
 nav{
     align-self: center;  
@@ -17,7 +16,6 @@ nav{
 a{
     text-decoration: none;
     color:white;
-    transition: color 3s ease;
     position: relative;
     transition: top 3s ease;
 }
@@ -32,11 +30,15 @@ div{align-self: center;}
     .hamb::after {
     content: "☰";font-size: 25px;}
     ul{display: none;}}
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     input{display: none;}}
-main{
+
+
+.margenes{
     margin-left: 200px;
     margin-right: 200px;
+}
+main{
     font-family: arial;
     display: grid;
     grid-template-columns: 1fr;
@@ -49,6 +51,7 @@ main{
     display: grid;
     grid-template-columns: 2fr;
     grid-template-rows: 1fr;
+    margin-bottom: 20px;
 }
 .texto1{
     grid-column: 1;
@@ -67,14 +70,15 @@ main{
     justify-content:space-between;
     align-self: center;
     flex-direction: row;
+    padding-bottom: 50px;
 }
 .opciones{
-    margin-top: 20px;
+    padding:10px;
     width: 200px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 30px;
+    height: 250px;
     text-align: center;
+    background-color: #E1E1E1;
+    
 }
 #B{
     color: #4199F4;
@@ -83,12 +87,10 @@ main{
 #icono{
     width: 50px;
     height: 50px;
-
 }
 img{
-    width: 300px;
+    width: 275px;
     height: 250px;
-    border-radius: 5%;
 }
 .tercero{
     grid-column: 1;
@@ -97,19 +99,20 @@ img{
     justify-content: space-between;
     align-self: center;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 .Portfolio{
-    width: 300px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 275px;
     padding-bottom: 30px;
     text-align: center;
+    background-color: white;
 }
 section{
     margin-top: 50px;
 }
 .cuarto{
     text-align: center;
+
     grid-column: 1;
     grid-row: 6/7;
 }
@@ -155,13 +158,11 @@ footer{
 .cuadros{
     text-align: left;
     font-weight: bold;
-}
-.cuarto{
-    align-items: center;
+    padding-left: 150px;
 }
 button{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color:#4199F4;
     width: 1200px;
     color: white;
@@ -173,4 +174,7 @@ button{
 .titulo2{
     grid-column: 1;
     grid-row: 4/5;
+}
+.gris{
+    background-color: #E1E1E1;
 }
