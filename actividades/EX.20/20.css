@@ -21,19 +21,13 @@ a{
 }
 a:hover{
     color: red;
-    top: 20px;
+    top: 5px;
 }
 h1{align-self: center;}
 input{align-self: center;}
 div{align-self: center;}
-@media screen and (max-width: 1000px) {
-    .hamb::after {
-    content: "☰";font-size: 25px;}
-    ul{display: none;}}
-@media screen and (max-width: 800px) {
-    input{display: none;}}
 
-    
+
 .margenes{
     margin-left: 200px;
     margin-right: 200px;
@@ -71,6 +65,7 @@ main{
     align-self: center;
     flex-direction: row;
     padding-bottom: 50px;
+    flex-wrap: wrap;
 }
 .opciones{
     padding:10px;
@@ -100,6 +95,7 @@ img{
     align-self: center;
     flex-direction: row;
     margin-bottom: 20px;
+    
 }
 .Portfolio{
     width: 275px;
@@ -136,21 +132,18 @@ footer{
     grid-column: 1/4;
     display: flex;
     justify-content: space-between;
-    align-self: center;
-    flex-direction: row;
-    text-align: left;
     width: 1300px;
 }
 .CIDE{
     width: 200px;
     text-align: left;
-
 }
 
 
 #redes{
     width: 30px;
     height: 30px;
+    filter: invert();
 }
 .cuadros{
     text-align: left;
@@ -175,3 +168,38 @@ button{
 .gris{
     background-color: #E1E1E1;
 }
+.margenes2{
+    margin-left: 350px;
+    margin-right: 350px;
+}
+.contenedor{
+    width:80%;
+    margin:auto;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .hamb::after {
+    content: "☰";font-size: 25px;}
+    ul{display: none;}  
+    .segundo{
+    margin-left: 400px;
+    margin-right: 400px;
+    align-items: left;}
+    .opciones{
+        margin-bottom: 20px;
+    }
+    .primero{
+   align-self: left;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+       width: 1000px;
+        margin-bottom: 20px;
+    }
+    
+   
+}
+@media screen and (max-width: 800px) {
+    input{display: none;}}
