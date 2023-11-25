@@ -178,28 +178,54 @@ button{
     align-items: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
     .hamb::after {
     content: "☰";font-size: 25px;}
-    ul{display: none;}  
+    .principio{display: none;}  
     .segundo{
-    margin-left: 400px;
-    margin-right: 400px;
-    align-items: left;}
+        flex-wrap: wrap;
+        }
     .opciones{
         margin-bottom: 20px;
     }
-    .primero{
-   align-self: left;
+    .margenes{
+        margin-left: 30px;
+        margin-right: 30px;
     }
-    main{
-        display: grid;
-        grid-template-columns: 1fr;
-       width: 1000px;
-        margin-bottom: 20px;
+    .margenes2{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .primero{
+        width: 170px;
+    }
+    .texto1{
+        width: 360px;
+        align-self: left;
+    }
+    .tercero{
+        flex-direction: column;
+    }
+    .cuarto{
+        width: 500px;
+        text-align: left;
+    }
+    .columnas{
+        width: 650px;
+        flex-wrap: wrap;
+    }
+    .cuadros{
+        width: 200px;
+        
     }
     
-   
 }
-@media screen and (max-width: 800px) {
-    input{display: none;}}
+@media screen and (max-width: 600px) {
+    input{display: none;}
+    .primero{
+        width: 90px;
+    }
+    .texto1{
+        width: 130px;
+        align-self: left;
+    }}
