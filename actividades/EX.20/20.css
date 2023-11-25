@@ -46,6 +46,7 @@ main{
     grid-template-columns: 2fr;
     grid-template-rows: 1fr;
     margin-bottom: 20px;
+
 }
 .texto1{
     grid-column: 1;
@@ -178,29 +179,31 @@ button{
     align-items: center;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1024px){
     .hamb::after {
     content: "☰";font-size: 25px;}
     .principio{display: none;}  
     .segundo{
+        width: 500px;
         flex-wrap: wrap;
+        padding-left: 200px;
         }
     .opciones{
         margin-bottom: 20px;
     }
     .margenes{
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .margenes2{
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .primero{
-        width: 170px;
+        width: 220px;
     }
     .texto1{
-        width: 360px;
+        width: 600px;
         align-self: left;
     }
     .tercero{
@@ -208,7 +211,7 @@ button{
     }
     .cuarto{
         width: 500px;
-        text-align: left;
+        text-align: center;
     }
     .columnas{
         width: 650px;
@@ -220,12 +223,51 @@ button{
     }
     
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 430px) {
     input{display: none;}
     .primero{
-        width: 90px;
+        grid-template-columns: auto;
+        grid-template-rows: 2fr;
+    }
+    main{
+        width: 20px;
+    }
+    #A{
+        grid-row: 2;
+        grid-column: 1;
     }
     .texto1{
-        width: 130px;
+        width: 280px;
         align-self: left;
-    }}
+    }
+    .opciones{
+        margin-bottom: 20px;
+    }
+    .segundo{
+        flex-direction: column;
+        justify-content:flex-start;
+        align-self: center;
+    }
+    .tercero{
+        width: 150px;
+    }
+    .Portfolio{
+        margin-bottom: 20px;
+    }
+    .cuarto{
+        width: 300px;
+     
+    }
+    .columnas{
+        flex-direction: column;
+        
+    }
+    .margenes{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .margenes2{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    }
