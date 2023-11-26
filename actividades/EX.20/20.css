@@ -232,7 +232,8 @@ button{
         grid-row: 2;
         grid-column: 1;
     }
-    .texto1{
+    .texto1{align-items: center;
+        justify-content: center;
         grid-row: 1;
         grid-column: 1;
         width: 310px;
