@@ -66,7 +66,7 @@ main{
     align-self: center;
     flex-direction: row;
     padding-bottom: 50px;
-    flex-wrap: wrap;
+    
 }
 .opciones{
     padding:10px;
@@ -173,11 +173,7 @@ button{
     margin-left: 350px;
     margin-right: 350px;
 }
-.contenedor{
-    width:80%;
-    margin:auto;
-    align-items: center;
-}
+
 
 @media screen and (max-width: 1024px){
     .hamb::after {
@@ -207,7 +203,10 @@ button{
         align-self: left;
     }
     .tercero{
-        flex-direction: column;
+        flex-direction: column; 
+    }
+    .Portfolio{
+        margin-bottom: 20px;
     }
     .cuarto{
         width: 500px;
@@ -223,33 +222,33 @@ button{
     }
     
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 530px) {
     input{display: none;}
     .primero{
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         grid-template-rows: 2fr;
-    }
-    main{
-        width: 20px;
     }
     #A{
         grid-row: 2;
         grid-column: 1;
     }
     .texto1{
-        width: 280px;
+        grid-row: 1;
+        grid-column: 1;
+        width: 310px;
         align-self: left;
     }
     .opciones{
         margin-bottom: 20px;
+          align-self: left;
     }
     .segundo{
         flex-direction: column;
-        justify-content:flex-start;
-        align-self: center;
+       margin-left: -200px
     }
     .tercero{
         width: 150px;
+        padding-left: 150px;
     }
     .Portfolio{
         margin-bottom: 20px;
@@ -260,14 +259,14 @@ button{
     }
     .columnas{
         flex-direction: column;
-        
+        align-self: center;
     }
     .margenes{
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .margenes2{
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     }
