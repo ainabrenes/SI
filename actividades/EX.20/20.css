@@ -46,6 +46,7 @@ main{
     grid-template-columns: 2fr;
     grid-template-rows: 1fr;
     margin-bottom: 20px;
+
 }
 .texto1{
     grid-column: 1;
@@ -65,7 +66,7 @@ main{
     align-self: center;
     flex-direction: row;
     padding-bottom: 50px;
-    flex-wrap: wrap;
+    
 }
 .opciones{
     padding:10px;
@@ -172,34 +173,101 @@ button{
     margin-left: 350px;
     margin-right: 350px;
 }
-.contenedor{
-    width:80%;
-    margin:auto;
-    align-items: center;
-}
 
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 1024px){
     .hamb::after {
     content: "☰";font-size: 25px;}
-    ul{display: none;}  
+    .principio{display: none;}  
     .segundo{
-    margin-left: 400px;
-    margin-right: 400px;
-    align-items: left;}
+        width: 500px;
+        flex-wrap: wrap;
+        padding-left: 200px;
+        }
     .opciones{
         margin-bottom: 20px;
     }
-    .primero{
-   align-self: left;
+    .margenes{
+        margin-left: 20px;
+        margin-right: 20px;
     }
-    main{
-        display: grid;
-        grid-template-columns: 1fr;
-       width: 1000px;
+    .margenes2{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .primero{
+        width: 220px;
+    }
+    .texto1{
+        width: 600px;
+        align-self: left;
+    }
+    .tercero{
+        flex-direction: column; 
+    }
+    .Portfolio{
         margin-bottom: 20px;
     }
+    .cuarto{
+        width: 500px;
+        text-align: center;
+    }
+    .columnas{
+        width: 650px;
+        flex-wrap: wrap;
+    }
+    .cuadros{
+        width: 200px;
+        
+    }
     
-   
 }
-@media screen and (max-width: 800px) {
-    input{display: none;}}
+@media screen and (max-width: 530px) {
+    input{display: none;}
+    .primero{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+    }
+    #A{
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .texto1{align-items: center;
+        justify-content: center;
+        grid-row: 1;
+        grid-column: 1;
+        width: 310px;
+        align-self: left;
+    }
+    .opciones{
+        margin-bottom: 20px;
+          align-self: left;
+    }
+    .segundo{
+        flex-direction: column;
+       margin-left: -200px
+    }
+    .tercero{
+        width: 150px;
+        padding-left: 150px;
+    }
+    .Portfolio{
+        margin-bottom: 20px;
+    }
+    .cuarto{
+        width: 300px;
+     
+    }
+    .columnas{
+        flex-direction: column;
+        align-self: center;
+    }
+    .margenes{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .margenes2{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    }
