@@ -19,6 +19,10 @@
 
             let parrafos=document.querySelectorAll("p")
             for(const parrafo of parrafos){
+                let size=parseInt(parrafo.style.fontSize)
+                if (!size){
+                    
+                }
                 parrafo.style.fontSize="2px"
             }
         }
