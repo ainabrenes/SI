@@ -6,24 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
         <p>primero</p>
         <p>segundo</p>
-    </div>
-    <div>
+
         <button onclick="Añadir()">Añade texto</button>
         <button onclick="Eliminar()">Eliminalo</button>
-    </div>
+
     <script>
         function Añadir(){
-            let nouParagraf = document.createElement("p");
+            let nouParagraf = document.createElement("div");
             nouParagraf.textContent = " lorem ipsum.";
             document.body.appendChild(nouParagraf);    
         }
         function Eliminar(){
-            let nouParagraf = document.createElement("p");
+            let nouParagraf = document.querySelector("div")
             document.body.removeChild(nouParagraf);
         }
+        
     </script>
     
 </body>
