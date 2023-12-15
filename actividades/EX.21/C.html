@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p>primero primero primero primero primero primero primero primero
+        primero primero primero primero primero primero primero primero primero
+        primero primero primero primero primero primero primero primero primero
+        primero primero primero primero primero primero primero primero primero</p>
+       
+
+        <button id="Traduc">Traduce</button>
+        <button id="Encima">Encima</button>
+
+    <script>
+        let booleanIdioma=false;
+        let Traduc=document.getElementById("Traduc");
+        Traduc.style.color="blue";
+        let Encima=document.getElementById("Encima");
+        Encima.style.color="red";
+
+        Traduc.addEventListener("click", function(){
+            if(booleanIdioma=false){
+                traducir();
+                booleanIdioma=true;
+            }
+            else{
+                !traducir();           
+            }
+        });
+
+        Encima.addEventListener("click", function(){
+            alert("Boton2 clicado!");
+        });
+        
+        Traduc.addEventListener("click", function(){
+            traducir();
+        });
+            
+        function traducir(){    
+            let Traducido = document.querySelector("p");
+            Traducido.textContent = "first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first";
+            }
+    
+    </script>
+    
+</body>
+</html>
