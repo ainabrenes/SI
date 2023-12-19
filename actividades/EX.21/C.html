@@ -44,7 +44,13 @@
             let Traducido = document.querySelector("p");
             Traducido.textContent = "first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first";
             }
-    
+        let PasarEncima=document.querySelector('p');
+        PasarEncima.addEventListener('mouseover',function(){
+            PasarEncima.style.color="red";
+        })
+        PasarEncima.addEventListener('mouseout', function() {
+            PasarEncima.style.color = ''; // Torna al color original
+          });
     </script>
     
 </body>
