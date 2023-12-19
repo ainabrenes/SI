@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p {
+          background-color: black;
+        }
+        .estilo {
+            background-color: red;
+            color:beige
+        } 
+    </style>
 </head>
 <body>
-    
+    <p>AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA </p>
+    <button id="Añadir">Añadir Classe</button>
+    <button id="Eliminar">Eliminar Classe</button>
+
+<script>
+    let info = document.querySelector('p');
+    let BotonAñadir = document.getElementById('Añadir');
+    let BotonEliminar = document.getElementById('Eliminar');
+
+    BotonAñadir.addEventListener('click', function() {
+      info.classList.add('estilo');
+    });
+
+    BotonEliminar.addEventListener('click', function() {
+      info.classList.remove('estilo');
+    });
+</script>
 </body>
 </html>
