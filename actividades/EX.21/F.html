@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="f.css" />
+
+
+</head>
+<body>
+    <header>
+        <h1>Editorial</h1>
+        <nav id="menu">
+            <ul id="enlaces">
+                <a href="#1">Inici </a>
+                <a href="#2"> Llibres </a>
+                <a href="#3"> Autors </a>
+                <a href="#4"> Contacte</a>
+            </ul>
+        </nav>
+       
+        <input type="text" id="Buscador" placeholder="Cerca">
+        <div></div>
+    </header>
+    <script>
+        
+        let hamburguesa=document.querySelector('div');
+
+        let menu = document.getElementById('menu');
+
+        let enlaces=document.getElementById('enlaces');
+
+        hamburguesa.addEventListener('click', function(){
+ 
+        if (menu.style.display === 'none') {
+        menu.style.display = 'block'; 
+        } else {
+        menu.style.display = 'none';
+        }
+        });
+        
+
+        enlaces.addEventListener('click',function() {
+            menu.style.display="none";
+        });
+    </script>
+</body>
+</html>
