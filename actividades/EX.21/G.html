@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Bienvenid@ al editor de tareas</h1>
+    <h2>Aqui podras realizar las configuraciones que desees</h2>
+    <label for="tarea">Añadir tareas</label>
+    <input type="text" id="tarea" name="tarea">
+    <input type="submit" value="Nueva tarea" id="botoncrear">
+    <nav id="ListaTareas">Tareas:
+        <ul>
+            <li></li>
+        </ul>
+    </nav>
+    <script>
+        let crear=document.getElementById('botoncrear');
+        let CrearLista= document.getElementById('ListaTareas');
+        
+        crear.addEventListener('click', function(){
+            let nuevoElemento = document.createElement("li");
+            nuevoElemento.appendChild(document.createTextNode(novaTasca));
+            CrearLista.appendChild(novaTascaElement);
+    
+
+        });
+    </script>
+</body>
+</html>
