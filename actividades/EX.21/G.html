@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    
+        .estilo {
+            background-color: green;
+    
+        } 
+
+    </style>
 </head>
 <body>
     
     <h1>Bienvenid@ al editor de tareas</h1>
     <h2>Aqui podras realizar las configuraciones que desees</h2>
-    <label for="tarea">Añadir tareas</label>
-    <input type="text" id="tarea" name="tarea">
-    <input type="submit" value="Nueva tarea" id="botoncrear">
-    <nav id="ListaTareas">Tareas:
-        <ul>
-            <li></li>
-        </ul>
-    </nav>
+    <nav id="ListaTareas">TAREAS: </nav>
+    <input type="text" id="TaskInput"  placeholder="Añadir tarea...">
+    <input type="submit" value="Añadir" id="botoncrear">
     <script>
         let crear=document.getElementById('botoncrear');
-        let CrearLista= document.getElementById('ListaTareas');
-        
         crear.addEventListener('click', function(){
+            let tasca=document.getElementById("TaskInput").value;
+            let Lista= document.getElementById('ListaTareas');
             let nuevoElemento = document.createElement("li");
-            nuevoElemento.appendChild(document.createTextNode(novaTasca));
-            CrearLista.appendChild(novaTascaElement);
+            nuevoElemento.textContent=tasca;
+            Lista.appendChild(nuevoElemento);
+            document.getElementById("TaskInput").value="";
     
-
+            nuevoElemento.addEventListener('click', function() {
+                nuevoElemento.classList.add('estilo');
+              });
         });
+        
     </script>
 </body>
 </html>
