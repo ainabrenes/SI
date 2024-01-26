@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Explorando Bellezas del Mundo</h1>
+    <h2>¡Bienvenidos a "Explorando Bellezas del Mundo"!</h2>
+    <p>Tu portal de confianza para descubrir, planificar y reservar experiencias de viaje inolvidables! En "Explorando Bellezas del Mundo",
+        entendemos que cada viaje es único y especial, y nos enorgullece ser tu compañero de confianza en la creación de recuerdos inolvidables.
+
+        Navega por nuestra amplia selección de destinos emocionantes, desde exóticas playas tropicales hasta fascinantes destinos culturales y majestuosas ciudades.
+        Hemos reunido las mejores ofertas de alojamiento, vuelos y actividades para que puedas personalizar tu viaje de acuerdo con tus gustos y preferencias.</p>
+        <h3>SANTORINI GRECIA</h3>
+        <p>Comenzamos nuestro viaje por la impresionante isla de Santorini en Grecia. Con sus característicos edificios blancos con cúpulas azules,
+        playas de aguas cristalinas y atardeceres de ensueño, Santorini es el destino perfecto para una escapada romántica.</p>
+        <h3>KIOTO, JAPÓN</h3>
+        <p>Viajamos ahora a la histórica ciudad de Kioto en Japón. Con sus templos antiguos, jardines zen y geishas paseando por las calles, Kioto te sumerge en la rica cultura japonesa.
+        No te pierdas el bosque de bambú de Arashiyama y los cerezos en flor durante la primavera.</p>
+        <h3>ROMA, ITALIA</h3>
+        <p>Embárcate en un viaje fascinante a la histórica ciudad de Roma, Italia. Con sus monumentos antiguos, plazas impresionantes y calles empedradas llenas de historia,
+        Roma te envuelve en la magia eterna de la antigua civilización romana.</p>
+        <h4>Elige las fechas que deseas seleccionar:</h4>
+        <h4>FECHA INICIO:</h4>
+        <input type="text"  id="fecha-inicio">
+        <h4>FECHA FIN:</h4>
+        <input type="text"  id="fecha-fin">
+        <script>
+            $(document).ready(function() {
+            
+                $("#fecha-inicio").datepicker({
+                  dateFormat: 'dd/mm/yy', 
+                  minDate: 0 
+                  
+                });
+          
+                $("#fecha-fin").datepicker({
+                  dateFormat: 'dd/mm/yy',  
+                  minDate: 0             
+                  
+                });
+              });
+        </script>
+</body>
+</html>
