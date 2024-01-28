@@ -16,7 +16,7 @@
 
         Navega por nuestra amplia selección de destinos emocionantes, desde exóticas playas tropicales hasta fascinantes destinos culturales y majestuosas ciudades.
         Hemos reunido las mejores ofertas de alojamiento, vuelos y actividades para que puedas personalizar tu viaje de acuerdo con tus gustos y preferencias.</p>
-        <h3>SANTORINI GRECIA</h3>
+        <h3>SANTORINI, GRECIA</h3>
         <p>Comenzamos nuestro viaje por la impresionante isla de Santorini en Grecia. Con sus característicos edificios blancos con cúpulas azules,
         playas de aguas cristalinas y atardeceres de ensueño, Santorini es el destino perfecto para una escapada romántica.</p>
         <h3>KIOTO, JAPÓN</h3>
@@ -25,26 +25,40 @@
         <h3>ROMA, ITALIA</h3>
         <p>Embárcate en un viaje fascinante a la histórica ciudad de Roma, Italia. Con sus monumentos antiguos, plazas impresionantes y calles empedradas llenas de historia,
         Roma te envuelve en la magia eterna de la antigua civilización romana.</p>
+        <h4>Aqui podra buscar directamente la desticacion deseada:</h4>
+        <input type="text" id="destino" placeholder="BUSCADOR">
         <h4>Elige las fechas que deseas seleccionar:</h4>
         <h4>FECHA INICIO:</h4>
-        <input type="text"  id="fecha-inicio">
+        <input type="text"  id="fecha_inicio">
         <h4>FECHA FIN:</h4>
-        <input type="text"  id="fecha-fin">
+        <input type="text"  id="fecha_fin">
+        <h4>Elige el presupuesto:</h4>
+        <div id="precio"></div>
         <script>
             $(document).ready(function() {
             
-                $("#fecha-inicio").datepicker({
-                  dateFormat: 'dd/mm/yy', 
+                $("#fecha_inicio").datepicker({
                   minDate: 0 
-                  
                 });
           
-                $("#fecha-fin").datepicker({
-                  dateFormat: 'dd/mm/yy',  
+                $("#fecha_fin").datepicker({
                   minDate: 0             
-                  
                 });
+            });
+            $(document).ready(function() {
+              let destinos=["SANTORINI GRECIA", "KIOTO JAPÓN", "ROMA ITALIA"]
+              $("#destino").autocomplete({
+                source:destinos
+                //source: ["SANTORINI GRECIA", "KIOTO JAPÓN", "ROMA ITALIA"]
+      
               });
+            });
+            $(document).ready(function(){
+              $("#precio").slider({
+                min: 0,
+                max: 1000,
+              });
+            })
         </script>
 </body>
 </html>
