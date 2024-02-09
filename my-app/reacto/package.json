@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set PUBLIC_URL=https://ainabrenes.github.io/SI/my-app/reacto/build&&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
