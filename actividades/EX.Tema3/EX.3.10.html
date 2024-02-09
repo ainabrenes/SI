@@ -26,7 +26,6 @@
         <p>Embárcate en un viaje fascinante a la histórica ciudad de Roma, Italia. Con sus monumentos antiguos, plazas impresionantes y calles empedradas llenas de historia,
         Roma te envuelve en la magia eterna de la antigua civilización romana.</p>
         <h4>Aqui podra buscar directamente la desticacion deseada:</h4>
-        <input type="text" id="destino" placeholder="BUSCADOR">
         <h4>Elige las fechas que deseas seleccionar:</h4>
         <h4>FECHA INICIO:</h4>
         <input type="text"  id="fecha_inicio">
@@ -34,9 +33,13 @@
         <input type="text"  id="fecha_fin">
         <h4>Elige el presupuesto:</h4>
         <div id="precio"></div>
+        <p id="PresupuestoDinero">Presupuesto: $<span id="min">0</span> - $<span id="max">1000</span></p>
+        <p></p><input type="text" id="destino" placeholder="BUSCADOR">
+        <input type="submit" value="Buscar" id="buscar">
+        <h4>Resultados de la búsqueda:</h4>
+        <ul id="resultados"></ul>
         <script>
             $(document).ready(function() {
-            
                 $("#fecha_inicio").datepicker({
                   minDate: 0 
                 });
@@ -45,20 +48,88 @@
                   minDate: 0             
                 });
             });
+
             $(document).ready(function() {
-              let destinos=["SANTORINI GRECIA", "KIOTO JAPÓN", "ROMA ITALIA"]
+              let destinos = ["SANTORINI GRECIA", "KIOTO JAPÓN", "ROMA ITALIA"];
               $("#destino").autocomplete({
-                source:destinos
-                //source: ["SANTORINI GRECIA", "KIOTO JAPÓN", "ROMA ITALIA"]
-      
+                source: destinos
               });
             });
+
             $(document).ready(function(){
               $("#precio").slider({
                 min: 0,
                 max: 1000,
+                range: true,
+                slide: function(event, ui) {
+                  Presupuesto(ui.values[0], ui.values[1]);
+                }
               });
+
+              function Presupuesto(min, max) {
+                $("#PresupuestoDinero").text(`$${min} - $${max}`);
+              }
+
+              $("#PresupuestoDinero").text("$" + $("#precio").slider("values", 0) + " - $" + $("#precio").slider("values", 1));
             })
+
+            $(document).ready(function(){
+              $("#buscar").click(function(){
+                let fechaInicio = $("#fecha_inicio").datepicker("getDate");
+                let fechaFin = $("#fecha_fin").datepicker("getDate");
+                let presupuestoMin = $("#precio").slider("values", 0);
+                let presupuestoMax = $("#precio").slider("values", 1);
+                let destinoBusqueda = $("#destino").val().toUpperCase();
+
+                let destinosData = [
+                  {
+                    nombre: "SANTORINI GRECIA",
+                    fechaInicio: "2024-03-01",
+                    fechaFin: "2024-03-10",
+                    presupuestoMin: 800,
+                    presupuestoMax: 1000
+                  },
+                  {
+                    nombre: "KIOTO JAPÓN",
+                    fechaInicio: "2024-04-15",
+                    fechaFin: "2024-04-25",
+                    presupuestoMin: 1200,
+                    presupuestoMax: 1200
+                  },
+                  {
+                    nombre: "ROMA ITALIA",
+                    fechaInicio: "2024-05-20",
+                    fechaFin: "2024-05-30",
+                    presupuestoMin: 1000,
+                    presupuestoMax: 1000
+                  }
+                ];
+
+                let resultadosFiltrados = destinosData.filter(destino => {
+                  let fechaInicioValida = !fechaInicio || new Date(destino.fechaInicio) >= fechaInicio;
+                  let fechaFinValida = !fechaFin || new Date(destino.fechaFin) <= fechaFin;
+                  let presupuestoValido = destino.presupuestoMin >= presupuestoMin && destino.presupuestoMax <= presupuestoMax;
+                  let destinoValido = !destinoBusqueda || destino.nombre.toUpperCase().includes(destinoBusqueda);
+
+                  return fechaInicioValida && fechaFinValida && presupuestoValido && destinoValido;
+                });
+
+                mostrarResultados(resultadosFiltrados);
+              });
+            });
+
+            function mostrarResultados(resultados){
+              let resultadosList = $("#resultados");
+              resultadosList.empty();
+
+              if (resultados.length > 0) {
+                resultados.forEach(destino => {
+                  resultadosList.append(`<li>${destino.nombre} - Fecha: ${destino.fechaInicio} a ${destino.fechaFin} - Presupuesto: $${destino.presupuestoMin} - $${destino.presupuestoMax}</li>`);
+                });
+              } else {
+                resultadosList.append("<li>No se encontraron resultados.</li>");
+              }
+            }
         </script>
 </body>
 </html>
