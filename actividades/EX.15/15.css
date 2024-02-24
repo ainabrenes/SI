@@ -1,0 +1,35 @@
+body{
+    font-family: arial;
+    background: linear-gradient(to bottom, white, black);
+    height: 220vh;
+    text-align: center;
+}
+.article{
+    width: 280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    background-color: white;
+    transition: transform 0.5s;
+    
+}
+.article:hover {
+    transform: scale(1.05);
+}
+.articulos{
+    display: flex;
+    justify-content:space-between;
+    align-self: center;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+img{
+    width: 250px; 
+    height: auto;
+    border-radius: 50%; 
+}
+a{
+    text-decoration: none;
+    color:purple;
+}

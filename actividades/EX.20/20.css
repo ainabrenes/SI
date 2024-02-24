@@ -1,0 +1,273 @@
+body{font-family: Arial;}
+header{
+    background-color: #4498C3;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;  
+}
+nav{
+    align-self: center;  
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color:white;
+    position: relative;
+    transition: top 3s ease;
+}
+a:hover{
+    color: red;
+    top: 5px;
+}
+h1{align-self: center;}
+input{align-self: center;}
+div{align-self: center;}
+
+
+.margenes{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+main{
+    font-family: arial;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    margin-bottom: 20px;
+}
+.primero{
+    grid-column: 1;
+    grid-row:1/2;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 20px;
+
+}
+.texto1{
+    grid-column: 1;
+    width: 1000px;
+}
+#A{
+    grid-column: 2;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+}
+.segundo{
+    grid-column: 1;
+    grid-row: 3/4;
+    display: flex;
+    justify-content:space-between;
+    align-self: center;
+    flex-direction: row;
+    padding-bottom: 50px;
+    
+}
+.opciones{
+    padding:10px;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    background-color: #E1E1E1;
+    
+}
+#B{
+    color: #4199F4;
+    font-weight: bold;
+}
+#icono{
+    width: 50px;
+    height: 50px;
+}
+img{
+    width: 275px;
+    height: 250px;
+}
+.tercero{
+    grid-column: 1;
+    grid-row: 5/6;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    
+}
+.Portfolio{
+    width: 275px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: white;
+}
+section{
+    margin-top: 50px;
+}
+.cuarto{
+    text-align: center;
+    grid-column: 1;
+    grid-row: 6/7;
+}
+footer{
+    background-color: #444546;
+    grid-column: 1;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows:2fr;
+    color:white;
+    margin-top: 20px;
+    
+}
+.horizontal{
+    grid-column: 1/4;
+    grid-row: 2;
+    text-align: center;
+}
+.columnas{
+    grid-row: 1;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+}
+.CIDE{
+    width: 200px;
+    text-align: left;
+}
+
+
+#redes{
+    width: 30px;
+    height: 30px;
+    filter: invert();
+}
+.cuadros{
+    text-align: left;
+    font-weight: bold;
+    padding-left: 150px;
+}
+button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:#4199F4;
+    width: 1200px;
+    color: white;
+}
+.titulo1{
+    grid-column: 1;
+    grid-row: 2/3;
+}
+.titulo2{
+    grid-column: 1;
+    grid-row: 4/5;
+}
+.gris{
+    background-color: #E1E1E1;
+}
+.margenes2{
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+
+@media screen and (max-width: 1024px){
+    .hamb::after {
+    content: "☰";font-size: 25px;}
+    .principio{display: none;}  
+    .segundo{
+        width: 500px;
+        flex-wrap: wrap;
+        padding-left: 200px;
+        }
+    .opciones{
+        margin-bottom: 20px;
+    }
+    .margenes{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .margenes2{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .primero{
+        width: 220px;
+    }
+    .texto1{
+        width: 600px;
+        align-self: left;
+    }
+    .tercero{
+        flex-direction: column; 
+    }
+    .Portfolio{
+        margin-bottom: 20px;
+    }
+    .cuarto{
+        width: 500px;
+        text-align: center;
+    }
+    .columnas{
+        width: 650px;
+        flex-wrap: wrap;
+    }
+    .cuadros{
+        width: 200px;
+        
+    }
+    
+}
+@media screen and (max-width: 530px) {
+    input{display: none;}
+    .primero{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+    }
+    #A{
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .texto1{align-items: center;
+        justify-content: center;
+        grid-row: 1;
+        grid-column: 1;
+        width: 310px;
+        align-self: left;
+    }
+    .opciones{
+        margin-bottom: 20px;
+          align-self: left;
+    }
+    .segundo{
+        flex-direction: column;
+       margin-left: -200px
+    }
+    .tercero{
+        width: 150px;
+        padding-left: 150px;
+    }
+    .Portfolio{
+        margin-bottom: 20px;
+    }
+    .cuarto{
+        width: 300px;
+     
+    }
+    .columnas{
+        flex-direction: column;
+        align-self: center;
+    }
+    .margenes{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .margenes2{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    }

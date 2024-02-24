@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>11111111111111111111111111111111111111111111111</p>
+    <p>222222222222222222222222taza22222222222222222222222</p>
+    <p>33333333333333333333333333333333333333333333333333333333333333333333333</p>
+    <p>44444444444444444444444444444444444444444444444</p>
+
+    <script>
+        let parrafos=document.querySelectorAll('p');
+        let palabra="taza";
+        let tamaño=50;
+
+        parrafos.forEach(function(parrafo){
+            if (parrafo.textContent.includes(palabra)||parrafo.textContent.length>tamaño){
+                parrafo.style.backgroundColor="pink";
+                parrafo.addEventListener('click',function(){
+                    alert('Has clicado este parrafo');
+                })
+            }
+        });
+    </script>
+</body>
+</html>

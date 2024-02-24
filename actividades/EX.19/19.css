@@ -1,0 +1,55 @@
+header{
+    background-color: #4498C3;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Arial;
+}
+nav{
+    align-self: center;  
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color:white;
+    transition: color 3s ease;
+    position: relative;
+    transition: top 3s ease;
+}
+a:hover{
+    color: red;
+    top: 20px;
+}
+h1{
+    align-self: center;
+}
+input{
+    align-self: center;
+}
+div{
+    align-self: center;
+}
+@media screen and (max-width: 1000px) {
+    
+    div::after {
+        content: "☰";
+
+        font-size: 25px;
+    
+    }
+    ul{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    
+    
+    input{
+        display: none;
+    }
+  }
+
