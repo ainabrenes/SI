@@ -1,0 +1,47 @@
+body{
+    background-color: #FFE0B6;
+    font-family: Arial;
+}
+
+nav{
+    float:left;
+    background-color: white;
+    width: 224px;
+    text-wrap: balance; 
+    clear: both;
+}
+
+img{
+    width: 100px;
+    height: 135px;
+}
+
+section{
+    
+    background-color:#EEE8DF ;
+    margin-left: 224px;
+    float: left;
+    margin: 0%;
+    padding: 0%;
+    
+
+        
+    }
+.article{
+    width: 200px; 
+    height: 325px; 
+    float: left; 
+    margin: 10px;
+    border-style: solid;
+    border-color:#FFE0B6 ;
+    border-width: 2.5px;
+    text-align: center;
+}
+
+
+footer{
+    clear: both;
+    text-align: center;
+    background-color: #EACCA4;
+    padding:20px;
+}

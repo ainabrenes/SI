@@ -1,0 +1,51 @@
+body{
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+    
+}
+@media screen and (max-width: 5000px) {
+  body {
+    background-color: pink;
+  }
+  div::after {
+      content: "∞";
+      font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+    body {
+      background-color: aqua;
+    }
+    div::after {
+        content: "1200px";
+        font-size: 20px;
+    }
+  }
+@media screen and (max-width: 900px) {
+    body {
+            background-color: red;
+        }
+    div::after {
+          content: "900px";
+          font-size: 20px;
+      }
+}
+@media screen and (max-width: 700px) {
+    body {
+      background-color: green;
+    }
+    div::after {
+      content: "700px";
+      font-size: 20px;
+    }
+  }
+
+@media screen and (max-width: 500px) {
+    body {
+      background-color: yellow;
+    }
+    div::after {
+      content: "500px";
+      font-size: 20px;
+    }
+  }

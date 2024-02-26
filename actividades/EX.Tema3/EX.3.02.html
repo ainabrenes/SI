@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>primero</p>
+        <p>segundo</p>
+    </div>
+    <div>
+        <button onclick="Grande()">+</button>
+        <button onclick="Peque()">-</button>
+    </div>
+    <script>
+        function Peque(){
+
+            let parrafos=document.querySelectorAll("p")
+            for(const parrafo of parrafos){
+                let size=parseInt(parrafo.style.fontSize)
+                if (!size){
+                    
+                }
+                parrafo.style.fontSize="2px"
+            }
+        }
+        function Grande(){
+
+            let parrafos=document.querySelectorAll("p")
+            for(const parrafo of parrafos){
+                parrafo.style.fontSize="50px"
+            }
+        }
+    </script>
+    
+</body>
+</html>

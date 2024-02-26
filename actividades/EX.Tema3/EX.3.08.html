@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        .estilo {
+            background-color: green;
+        } 
+
+    </style>
+</head>
+<body>
+    
+    <h1>Bienvenid@ al editor de tareas</h1>
+    <h2>Aqui podras realizar las configuraciones que desees</h2>
+    <nav id="ListaTareas">TAREAS: </nav>
+    <input type="text" id="Tareaañadida"  placeholder="Añadir tarea...">
+    <input type="submit" value="Añadir" id="botoncrear">
+    <input type="submit" value="Eliminar" id="botoneliminar">
+    <input type="submit" value="Todas" id="botonMostrarTodas">
+    <input type="submit" value="Activas" id="botonMostrarActivas">
+    <input type="submit" value="Completadas" id="botonMostrarCompletadas">
+    <script>
+        let crear=document.getElementById('botoncrear');
+        let eliminar=document.getElementById('botoneliminar');
+        let mostrarTodas = document.getElementById('botonMostrarTodas');
+        let mostrarActivas = document.getElementById('botonMostrarActivas');
+        let mostrarCompletadas = document.getElementById('botonMostrarCompletadas');
+        let Lista= document.getElementById('ListaTareas');
+        crear.addEventListener('click', function(){
+            let tasca=document.getElementById("Tareaañadida").value; 
+            let nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent=tasca;
+            Lista.appendChild(nuevoElemento);
+            document.getElementById("Tareaañadida").value="";
+    
+            nuevoElemento.addEventListener('click', function() {
+                nuevoElemento.classList.add('estilo');
+            });
+            eliminar.addEventListener('click', function() {
+                let tareasSeleccionadas = document.querySelectorAll('.estilo');
+                    tareasSeleccionadas.forEach(function(tarea) {
+                        Lista.removeChild(tarea);
+                    });
+            });
+        });
+        mostrarTodas.addEventListener('click', function() {
+            let tareas = Lista.children; 
+            for (let tarea of tareas) {
+                tarea.style.display = 'block';
+            }
+        });
+
+        mostrarActivas.addEventListener('click', function() {
+            let tareas = Lista.children;
+        for (let tarea of tareas) {
+            tarea.style.display = tarea.classList.contains('estilo') ? 'none' : 'block'; 
+        }
+        });
+
+        mostrarCompletadas.addEventListener('click', function() {
+            let tareas = Lista.children;
+        for (let tarea of tareas) {
+            tarea.style.display = tarea.classList.contains('estilo') ? 'block' : 'none'; 
+        }
+        });
+        
+    </script>
+</body>
+</html>
