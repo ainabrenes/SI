@@ -1,4 +1,7 @@
-export const filas=[
+import manzana from '../imagenes/manzana.jpg';
+import pera from '../imagenes/pera.webp';
+import coco from '../imagenes/coco.jpg'
+export const fila=[
     {
         producto:"manzana",
         cantidad:2,
@@ -6,7 +9,7 @@ export const filas=[
         tienda:"Mercadona",
         notas:"Comprar 2",
         comprado:true,
-        imagen: "...",
+        imagen: manzana
     },
     {
         producto:"pera",
@@ -15,7 +18,7 @@ export const filas=[
         tienda:"Mercadona",
         notas:"Comprar 1",
         comprado:true,
-        imagen: "...",
+        imagen: pera
     },
     {
         producto:"coco",
@@ -24,7 +27,7 @@ export const filas=[
         tienda:"Mercadona",
         notas:"Comprar 5",
         comprado:true,
-        imagen: "...",
+        imagen: coco
     }
 ];
-export default filas;
+export default fila;

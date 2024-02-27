@@ -3,12 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import Table from './componentes/Table';
 import lista from './componentes/lista'
+import  Row from './componentes/Row'
 
 function App() {
   return (
     <div className="App">
       <h1>Llista de compres</h1>
-      <Table  />
+     
+    <Table></Table>
+      
     </div>
   );
 }

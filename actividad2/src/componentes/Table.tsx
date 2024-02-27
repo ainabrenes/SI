@@ -1,7 +1,10 @@
 import React from 'react';
-import {filas} from './lista';
+import {fila} from './lista';
 import Row from './Row';
 function Table(){
+    
+    
+    return<>
     <table className="tabla">
         <tr>
           <th>Producto</th>
@@ -12,8 +15,13 @@ function Table(){
           <th>Comprado</th>
           <th>Imagen</th>
         </tr>
-    </table>
-    return<></>;
+
+        <tbody>
+        {fila.map((item, index) => (
+          <Row key={index} fila={item} />
+        ))}
+      </tbody>
+    </table></>;
 
 }
 export default Table;

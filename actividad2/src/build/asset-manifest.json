@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "https://ainabrenes.github.io/SI/actividad2/src/build/static/css/main.f855e6bc.css",
+    "main.js": "https://ainabrenes.github.io/SI/actividad2/src/build/static/js/main.04d4a613.js",
+    "static/js/453.5b60dc3e.chunk.js": "https://ainabrenes.github.io/SI/actividad2/src/build/static/js/453.5b60dc3e.chunk.js",
+    "static/media/coco.jpg": "https://ainabrenes.github.io/SI/actividad2/src/build/static/media/coco.7ec0c78d11ed630acc44.jpg",
+    "static/media/manzana.jpg": "https://ainabrenes.github.io/SI/actividad2/src/build/static/media/manzana.35dae15c4b6b53dbd7b4.jpg",
+    "static/media/pera.webp": "https://ainabrenes.github.io/SI/actividad2/src/build/static/media/pera.70da26b5b6b5af11e978.webp",
+    "index.html": "https://ainabrenes.github.io/SI/actividad2/src/build/index.html",
+    "main.f855e6bc.css.map": "https://ainabrenes.github.io/SI/actividad2/src/build/static/css/main.f855e6bc.css.map",
+    "main.04d4a613.js.map": "https://ainabrenes.github.io/SI/actividad2/src/build/static/js/main.04d4a613.js.map",
+    "453.5b60dc3e.chunk.js.map": "https://ainabrenes.github.io/SI/actividad2/src/build/static/js/453.5b60dc3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.04d4a613.js"
+  ]
+}

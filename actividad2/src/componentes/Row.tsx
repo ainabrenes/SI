@@ -7,7 +7,7 @@ interface Prompts{
             tienda:String,
             notas:String,
             comprado:Boolean,
-            imagen: String,
+            imagen:string,
         }
     };
 const Row: React.FC<Prompts> = ({ fila }) => {
@@ -19,9 +19,7 @@ const Row: React.FC<Prompts> = ({ fila }) => {
               <td>{fila.tienda}</td>
               <td>{fila.notas}</td>
               <td>{fila.comprado ? 'Sí' : 'No'}</td>
-              <td>
-                <img style={{ maxWidth: '100px', maxHeight: '100px' }} />
-              </td>
+              <td><img src={fila.imagen} style={{ maxWidth: '100px', maxHeight: '100px' }}></img></td>
             </tr>
           );
         
