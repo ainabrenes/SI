@@ -1,11 +1,13 @@
 import React from 'react';
 import {fila} from './lista';
 import Row from './Row';
-function Table(){
+import Table from 'react-bootstrap/Table';
+function Tabla(){
     
     
     return<>
-    <table className="tabla">
+    <Table striped bordered hover variant="dark">
+      <thead>
         <tr>
           <th>Producto</th>
           <th>Cantidad</th>
@@ -15,13 +17,13 @@ function Table(){
           <th>Comprado</th>
           <th>Imagen</th>
         </tr>
-
+      </thead>
         <tbody>
         {fila.map((item, index) => (
           <Row key={index} fila={item} />
         ))}
       </tbody>
-    </table></>;
+    </Table></>;
 
 }
-export default Table;
+export default Tabla;
