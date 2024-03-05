@@ -3,21 +3,18 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 const Actividades = () => {
     return(
     <div>
-        <h1> Explora la Deliciosa Oferta Gastronómica de Roma</h1>
-        <h3>Roma, la Ciudad Eterna, no solo es famosa por sus antiguas ruinas y su rica historia, sino también por su increíble cocina. Desde encantadoras trattorias hasta elegantes restaurantes gourmet, la capital italiana ofrece una amplia gama de opciones culinarias para satisfacer todos los gustos y presupuestos.</h3>
+        <h1> Bienvenido a la emocionante ciudad de Roma</h1>
+        <h3>Donde la historia, la cultura y la diversión se entrelazan en cada esquina! En nuestra página web, te ofrecemos una amplia gama de actividades de ocio para que aproveches al máximo tu tiempo en esta ciudad eterna.</h3>
         <p>
-        Trattoria Da Enzo
-Ubicada en Via dei Vascellari, 29, la Trattoria Da Enzo es un tesoro escondido que ofrece auténtica cocina romana en un ambiente acogedor y familiar. Disfruta de platos tradicionales como la pasta cacio e pepe o la saltimbocca alla romana, acompañados de vinos locales seleccionados cuidadosamente.
+        Explora la rica historia de Roma con nuestras visitas guiadas a los emblemáticos monumentos como el Coliseo, el Foro Romano y el Vaticano. Sumérgete en la antigua Roma mientras caminas por las ruinas históricas y descubre los secretos mejor guardados de la Ciudad Eterna de la mano de nuestros expertos guías.
 
-La Pergola
-Situado en Via Alberto Cadlolo, 101, en lo alto de la colina del Monte Mario, La Pergola es un destino gastronómico de primer nivel. Con tres estrellas Michelin, este restaurante ofrece una experiencia culinaria inolvidable con vistas panorámicas de la Ciudad Eterna. Disfruta de exquisitos platos elaborados con ingredientes frescos y de temporada, acompañados de una extensa carta de vinos.
+Para los amantes del arte y la cultura, Roma ofrece una infinidad de museos y galerías que albergan obras maestras de renombre mundial. Desde la Capilla Sixtina hasta la Galería Borghese, cada rincón de la ciudad está impregnado de arte y belleza que te dejarán sin aliento.
 
-Il Pagliaccio
-En Via dei Banchi Vecchi, 129a, descubre la excelencia culinaria en Il Pagliaccio, un restaurante con dos estrellas Michelin. Con una cocina creativa y contemporánea, el chef Anthony Genovese combina técnicas innovadoras con ingredientes italianos tradicionales para crear platos sorprendentes y deliciosos.
+No te pierdas la oportunidad de degustar la deliciosa gastronomía italiana en nuestros tours gastronómicos, donde podrás probar auténticos platos romanos y descubrir los sabores únicos de la cocina local. Desde pasta fresca hasta gelato artesanal, cada bocado es una experiencia para el paladar.
 
-Roscioli
-Para una experiencia gastronómica única, visita Roscioli en Via dei Giubbonari, 21. Este establecimiento, que combina restaurante, panadería y tienda de alimentos gourmet, es famoso por sus pizzas al taglio, sus platos de pasta fresca y sus deliciosos embutidos y quesos italianos.
-        </p>
+Y para aquellos que buscan emociones más activas, Roma ofrece una variedad de actividades al aire libre, como ciclismo, senderismo y navegación por el río Tíber. Disfruta de las impresionantes vistas de la ciudad mientras te embarcas en aventuras al aire libre que te dejarán recuerdos inolvidables.
+
+En nuestra página web, puedes explorar todas estas opciones y más, y reservar tus actividades de ocio con facilidad. ¡Prepárate para vivir una experiencia inolvidable en la fascinante ciudad de Roma!</p>
     </div>
     );
 }

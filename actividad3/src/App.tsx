@@ -17,6 +17,8 @@ function App() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
+        <Navbar.Brand href="/inicio">INDEX</Navbar.Brand>
+        <br></br>
         <Navbar.Brand href="/interes">PUNTOS DE INTERES</Navbar.Brand>
         <br></br>
         <Navbar.Brand href="/restaurantes">RESTAURANTES</Navbar.Brand>
