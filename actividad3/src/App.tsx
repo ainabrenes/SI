@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import Inicio from './views/Inicio';
 import Interes from './views/Interes';
 import Hoteles from './views/Hoteles';
+import Actividades from './views/Actividades';
 import Restaurantes from './views/Restaurantes';
 import './App.css';
 import Nav from 'react-bootstrap/Nav';
@@ -21,6 +22,8 @@ function App() {
         <Navbar.Brand href="/restaurantes">RESTAURANTES</Navbar.Brand>
         <br></br>
         <Navbar.Brand href="/hoteles">HOTELES</Navbar.Brand>
+        <br></br>
+        <Navbar.Brand href="/actividades">ACTIVIDADES</Navbar.Brand>
         
       </Container>
       
@@ -31,6 +34,7 @@ function App() {
         <Route path="/interes" element={<Interes />} />
         <Route path="/restaurantes" element={<Restaurantes/>}/>
         <Route path="/hoteles" element={<Hoteles/>}/>
+        <Route path="/actividades" element={<Actividades/>}/>
       </Routes>
     </BrowserRouter>
     </Navbar>
