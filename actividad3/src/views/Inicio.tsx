@@ -1,5 +1,6 @@
 import React from 'react';
-const inicio = () => {
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+const Inicio = () => {
     return(
     <div>
         <h1>Bienvenidos a Roma ¡Bienvenidos a la Ciudad Eterna!</h1>
@@ -11,4 +12,4 @@ const inicio = () => {
     </div>
     );
 }
-export default inicio;
+export default Inicio;
