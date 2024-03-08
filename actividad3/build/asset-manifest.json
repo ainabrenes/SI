@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://ainabrenes.github.io/SI/actividad3/src/build/static/css/main.f855e6bc.css",
+    "main.js": "https://ainabrenes.github.io/SI/actividad3/src/build/static/js/main.f58c8b70.js",
+    "static/js/453.ce47bd62.chunk.js": "https://ainabrenes.github.io/SI/actividad3/src/build/static/js/453.ce47bd62.chunk.js",
+    "index.html": "https://ainabrenes.github.io/SI/actividad3/src/build/index.html",
+    "main.f855e6bc.css.map": "https://ainabrenes.github.io/SI/actividad3/src/build/static/css/main.f855e6bc.css.map",
+    "main.f58c8b70.js.map": "https://ainabrenes.github.io/SI/actividad3/src/build/static/js/main.f58c8b70.js.map",
+    "453.ce47bd62.chunk.js.map": "https://ainabrenes.github.io/SI/actividad3/src/build/static/js/453.ce47bd62.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.f58c8b70.js"
+  ]
+}
