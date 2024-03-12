@@ -10,6 +10,7 @@ import './App.css';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
+import { Link } from 'fs';
 
 
 
@@ -18,9 +19,9 @@ function App() {
     <BrowserRouter>
     <Navbar expand="lg" className="bg-body-tertiary"  bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="/inicio">INDEX</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/inicio">INDEX</Navbar.Brand>
         <br></br>
-        <Navbar.Brand href="/interes">PUNTOS DE INTERES</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/interes">PUNTOS DE INTERES</Navbar.Brand>
         <br></br>
         <Navbar.Brand href="/restaurantes">RESTAURANTES</Navbar.Brand>
         <br></br>
