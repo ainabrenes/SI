@@ -17,17 +17,17 @@ import { Link } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-    <Navbar expand="lg" className="bg-body-tertiary"  bg="dark" data-bs-theme="dark">
+    <Navbar expand="lg" className="bg-body-tertiary"  bg="dark" data-bs-theme="light">
       <Container>
-        <Navbar.Brand as={Link} to="/inicio">INDEX</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">INDEX</Navbar.Brand>
         <br></br>
-        <Navbar.Brand as={Link} to="/interes">PUNTOS DE INTERES</Navbar.Brand>
+        <Nav.Link as={Link} to="/interes">PUNTOS DE INTERES</Nav.Link>
         <br></br>
-        <Navbar.Brand  as={Link} to="/restaurantes">RESTAURANTES</Navbar.Brand>
+        <Nav.Link as={Link} to="/restaurantes">RESTAURANTES</Nav.Link>
         <br></br>
-        <Navbar.Brand as={Link} to="/hoteles">HOTELES</Navbar.Brand>
+        <Nav.Link as={Link} to="/hoteles">HOTELES</Nav.Link>
         <br></br>
-        <Navbar.Brand as={Link} to="/actividades">ACTIVIDADES</Navbar.Brand>
+        <Nav.Link as={Link} to="/actividades">ACTIVIDADES</Nav.Link>
         
       </Container>
       </Navbar>
