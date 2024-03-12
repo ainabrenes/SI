@@ -15,7 +15,8 @@ import Container from 'react-bootstrap/Container';
 
 function App() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <BrowserRouter>
+    <Navbar expand="lg" className="bg-body-tertiary"  bg="dark" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="/inicio">INDEX</Navbar.Brand>
         <br></br>
@@ -28,8 +29,8 @@ function App() {
         <Navbar.Brand href="/actividades">ACTIVIDADES</Navbar.Brand>
         
       </Container>
-      
-    <BrowserRouter>
+      </Navbar>
+   
     
       <Routes>
         <Route index element={<Inicio />} />
@@ -39,7 +40,7 @@ function App() {
         <Route path="/actividades" element={<Actividades/>}/>
       </Routes>
     </BrowserRouter>
-    </Navbar>
+    
   );
 }
 
