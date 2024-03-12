@@ -10,7 +10,7 @@ import './App.css';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { Link } from 'fs';
+import { Link } from 'react-router-dom';
 
 
 
@@ -23,11 +23,11 @@ function App() {
         <br></br>
         <Navbar.Brand as={Link} to="/interes">PUNTOS DE INTERES</Navbar.Brand>
         <br></br>
-        <Navbar.Brand href="/restaurantes">RESTAURANTES</Navbar.Brand>
+        <Navbar.Brand  as={Link} to="/restaurantes">RESTAURANTES</Navbar.Brand>
         <br></br>
-        <Navbar.Brand href="/hoteles">HOTELES</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/hoteles">HOTELES</Navbar.Brand>
         <br></br>
-        <Navbar.Brand href="/actividades">ACTIVIDADES</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/actividades">ACTIVIDADES</Navbar.Brand>
         
       </Container>
       </Navbar>
