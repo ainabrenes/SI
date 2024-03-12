@@ -30,8 +30,6 @@ function App() {
         
       </Container>
       </Navbar>
-   
-    
       <Routes>
         <Route index element={<Inicio />} />
         <Route path="/interes" element={<Interes />} />
