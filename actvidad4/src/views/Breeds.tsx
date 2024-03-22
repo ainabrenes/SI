@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Container } from "react-dom";
-
+import { Link } from "react-router-dom";
 export type Breeds = Breed[]
 
 export interface Breed{
@@ -62,12 +62,22 @@ export default function Razas() {
 
 
     const [razas, setRazas] = React.useState([] as Breeds);
-    React.useEffect(() => {
-        fetch("https://api.thedogapi.com/v1/breeds").then((response) => response.json()).then((data: Breeds) => {
-            setRazas(data);
-        })
-    })
-    return<>{razas.map((raza, i) => {
-    return <p>{raza.name}</p>;
-    })}</>
+    
+  useEffect(() => {
+    fetch("https://api.thedogapi.com/v1/breeds")
+      .then((response) => response.json())
+      .then((data: Breeds) => {
+        setRazas(data);
+      });
+  }, []);
+
+  return (
+    <div>
+      {razas.map((raza, i) => (
+        <div key={i}>
+          <Link to={`/razas/${raza.id}`}>{raza.name}</Link>
+        </div>
+      ))}
+    </div>
+  );
 }
