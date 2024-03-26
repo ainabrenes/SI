@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "../actvidad4/src/views/a.tsx"  ]
 }
