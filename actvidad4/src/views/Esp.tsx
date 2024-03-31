@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 
@@ -42,17 +42,15 @@ interface Breed {
   reference_image_id: string;
   image: Image;
 }
-
-interface Weight {
-  imperial: string;
-  metric: string;
-}
-
 interface Image {
   id: string;
   width: number;
   height: number;
   url: string;
+}
+interface Weight {
+  imperial: string;
+  metric: string;
 }
 
 const DetallesRaza: React.FC = () => {
@@ -61,7 +59,7 @@ const DetallesRaza: React.FC = () => {
   
 
   useEffect(() => {
-    fetch(`https://api.thedogapi.com/v1/breeds/${id}`)
+    fetch(`https://api.thecatapi.com/v1/breeds/${id}`)
       .then((response) => response.json())
       .then((data: Breed) => {
         setRaza(data);
@@ -79,6 +77,10 @@ const DetallesRaza: React.FC = () => {
     
       <h2>{raza.name}</h2>
       <p>{raza.description}</p>
+      {raza.image !== undefined && (
+        <img src={raza.image.url} alt={raza.name} />
+      )}
+      
     </div>
   );
 }

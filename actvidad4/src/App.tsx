@@ -1,10 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Breeds from './views/Breeds';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Razas from './views/Breeds';
-import Esp from './views/Esp'; 
+import Esp from './views/Esp';
 function App() {
   return (
     <BrowserRouter>
