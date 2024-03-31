@@ -77,10 +77,6 @@ const DetallesRaza: React.FC = () => {
     
       <h2>{raza.name}</h2>
       <p>{raza.description}</p>
-      {raza.image !== undefined && (
-        <img src={raza.image.url} alt={raza.name} />
-      )}
-      
     </div>
   );
 }
