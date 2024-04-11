@@ -1,5 +1,5 @@
 {
-  "name": "actvidad4",
+  "name": "actividad5",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,20 +7,18 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.88",
-    "@types/react": "^18.2.65",
-    "@types/react-dom": "^18.2.21",
-    "@types/react-router-dom": "^5.3.3",
+    "@types/node": "^16.18.96",
+    "@types/react": "^18.2.75",
+    "@types/react-dom": "^18.2.24",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set PUBLIC_URL=https://ainabrenes.github.io/SI/actvidad4/build&&react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -41,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "typescript": "^5.4.3"
   }
 }

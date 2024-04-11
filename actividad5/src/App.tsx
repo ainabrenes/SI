@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Razas from './views/Breeds';
-import Esp from './views/Esp';
+
 function App() {
   return (
     <BrowserRouter>
