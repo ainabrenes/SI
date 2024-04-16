@@ -1,60 +1,44 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 
 interface Root {
-  nombre: string
-  id: number
-  disponible: boolean
-  imagen?: string
-  imagenURL?: string
+    nombre: string
+    id: number
+    disponible: boolean
+    imagen?: string
+    imagenURL?: string
 }
+export default function Tiendas() {
+    const [instrumentos, setInstrumentos] = useState<Root[]>([]);
 
-const instrumentos: Root[]=[
-            {
-                "nombre": "Piano",
-                "id": 1,
-                "disponible": true,
-                "imagen": "https://hinves.com/wp-content/uploads/2013/05/boston-gp178-negro.jpg"
-            },
-            {
-                "nombre": "Guitarra",
-                "id": 2,
-                "disponible": false,
-                "imagenURL": "https://guitarrasbros.com/public/images/brosguitar002-22-1-1659527214.jpg"
-            },
-            {
-                "nombre": "Bateria",
-                "id": 3,
-                "disponible": true,
-                "imagenURL": "https://media.istockphoto.com/id/174921468/es/foto/tambores.jpg?s=612x612&w=0&k=20&c=gl9F2p7NuvYxPOeLqyDqcv51ZsueBRs5DVJXQMSzIMU="
-            },
-            {
-                "nombre": "Flauta",
-                "id": 4,
-                "disponible": true,
-                "imagenURL": "https://dam.elcorteingles.es/producto/www-0400912603199-00.jpg?impolicy=Resize&width=640&height=640"
-            },
-            {
-                "nombre": "Arpa",
-                "id": 5,
-                "disponible": false,
-                "imagenURL": "https://musicaladn.com/145758/arpa-salvi-pedal-daphne-47ex-caoba.jpg"
-            }
-        ];
-export default function Tiendas(){
+
+    useEffect(() => {
+        fetch("https://raw.githubusercontent.com/ainabrenes/SI/main/actividad5/src/views/data.json")
+            .then((response) => response.json())
+            .then((data: Root[]) => {
+                setInstrumentos(data);
+            });
+    })
+
     return (
         <div>
-        {instrumentos.map(tienda => (
-            <div>
-            {tienda.nombre}
-            {tienda.id}
-            {tienda.imagenURL}
-            </div>
-        )
-        )
-        }
+            <h1>Productos</h1>
+            {instrumentos.map(tienda => (
+                <div>
+                    {tienda.nombre}
+
+                    <p>
+                        <img src={tienda.imagenURL} width={75} height={75} />
+                    </p>
+                    {tienda.disponible}
+                </div>
+            )
+            )
+            }
         </div>
-    )
+    );
 }
-   
+
+
+

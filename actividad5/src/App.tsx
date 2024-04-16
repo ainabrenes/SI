@@ -7,10 +7,7 @@ export default function App() {
   return (
     <BrowserRouter>
     <div>
-      <Routes>
-        
-        <Route path="/Instrumentos" element={<Tiendas />} />
-      </Routes>
+    <Tiendas/>
     </div>
   </BrowserRouter>
   );
