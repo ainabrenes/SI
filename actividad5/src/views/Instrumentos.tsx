@@ -44,27 +44,17 @@ const instrumentos: Root[]=[
         ];
 export default function Tiendas(){
     return (
-        {instrumentos.map(tienda=>(
-            {instrumento.nombre} 
-        )   })
-}
-    return (
-        instrumentos.map(instrumento=>(
-            {instrumento.nombre}
-        ))
         <div>
-          <h1>Instrumentos</h1>
-          <div className="instrumentos-list">
-            {instrumentos.map((instrumento) => (
-              <div key={instrumento.id} className="card">
-                <img src={instrumento.imagen || instrumento.imagenURL} alt={instrumento.nombre} />
-                <div className="card-body">
-                  <h5 className="card-title">{instrumento.nombre}</h5>
-                  <p className="card-text">Disponible: {instrumento.disponible ? "Sí" : "No"}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        {instrumentos.map(tienda => (
+            <div>
+            {tienda.nombre}
+            {tienda.id}
+            {tienda.imagenURL}
+            </div>
+        )
+        )
+        }
         </div>
-      );
+    )
 }
+   

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Instrumentos from "./views/Elementos"; // Importa tu componente Instrumentos
+import Instrumentos from "./views/Instrumentos"; // Importa tu componente Instrumentos
+import Tiendas from "./views/Instrumentos";
 
 export default function App() {
   return (
@@ -8,7 +9,7 @@ export default function App() {
     <div>
       <Routes>
         
-        <Route path="./views/Elementos" element={<Instrumentos />} />
+        <Route path="/Instrumentos" element={<Tiendas />} />
       </Routes>
     </div>
   </BrowserRouter>
