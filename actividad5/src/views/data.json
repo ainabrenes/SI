@@ -3,7 +3,7 @@
         "nombre": "Piano",
         "id": 1,
         "disponible": true,
-        "imagen": "https://hinves.com/wp-content/uploads/2013/05/boston-gp178-negro.jpg"
+        "imagenURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx4TROxwO9BR0665GYpfBwOj-Z1vXblE0sVmcRj4jlHw&s"
     },
     {
         "nombre": "Guitarra",
