@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "InstrumentoMusical",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "integer" },
+      "nombre": { "type": "string" },
+      "disponible": { "type": "boolean" },
+      "imagen": { "type": "string" },
+      "imagenURL": { "type": "string" }
+    },
+    "required": ["nombre", "id", "disponible"]
+  }
+}
