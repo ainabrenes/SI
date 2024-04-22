@@ -31,7 +31,9 @@ export default function Tiendas() {
                     <p>
                         <img src={tienda.imagenURL} width={75} height={75} />
                     </p>
-                    {tienda.disponible}
+                    <p>
+                        {tienda.disponible? "Diponible":"No Disponible"}
+                    </p>
                 </div>
             )
             )
