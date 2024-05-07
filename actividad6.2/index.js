@@ -35,6 +35,11 @@ app.post("/usuario", (req, res) => {
   //usuarioId= req.query.id;
   //const row =db.prepare ("SELECT * from usuarios WHERE id=?").get(usuarioId);
   //res.json(row)
+  try{ 
+    console.log(req.body);
+    if (!req.body.nombre || !req.body.email) {
+      throw new Error("Nombre y correo electrónico son campos obligatorios.");
+    }
   console.log(req.body);
   if (req.body.nombre && req.body.email){
     const statement =db.prepare("INSERT INTO usuarios (nombre,email) VALUES(?,?)")
@@ -43,12 +48,20 @@ app.post("/usuario", (req, res) => {
    console.log(info);
   }
   res.redirect("usuario");
-}) 
+}catch (error) {
+  res.status(400).send(error.message);
+}
+});
 //productos
 app.get('/producto', (req, res) => {
   res.render("producto");
 })
 app.post('/producto', (req, res) => {
+  try{
+    console.log(req.body);
+    if (!req.body.nombre || !req.body.precio) {
+      throw new Error("Nombre y precio electrónico son campos obligatorios.");
+    }
   console.log(req.body);
   if (req.body.nombre && req.body.precio){
     const statement =db.prepare("INSERT INTO productos (nombre, precio) VALUES(?,?)")
@@ -56,6 +69,9 @@ app.post('/producto', (req, res) => {
     console.log(info);
   }
   res.redirect("producto");
+}catch (error) {
+  res.status(400).send(error.message);
+}
 })
 //comandas
 app.get('/comandas', (req, res) => {
