@@ -25,21 +25,22 @@ app.get('/usuarios', (req, res) => {
   })
 
 //el render de la vista con un form
-app.get('/usuario', (req, res) => {
+app.get("/usuario", (req, res) => {
     //usuarioId= req.query.id;
     //const row =db.prepare ("SELECT * from usuarios WHERE id=?").get(usuarioId);
     res.render("usuario");
 })
 //capturar
-app.post('/usuario', (req, res) => {
+app.post("/usuario", (req, res) => {
   //usuarioId= req.query.id;
   //const row =db.prepare ("SELECT * from usuarios WHERE id=?").get(usuarioId);
   //res.json(row)
   console.log(req.body);
   if (req.body.nombre && req.body.email){
-    const statement =db.prepare("INSERT INTO usuarios (nombre, email) VALUES(?,?)")
+    const statement =db.prepare("INSERT INTO usuarios (nombre,email) VALUES(?,?)")
     const info =statement.run(req.body.nombre,req.body.email);
-    console.log(info);
+    //statement.run(req.body.nombre,req.body.email)
+   console.log(info);
   }
   res.redirect("usuario");
 }) 
@@ -47,7 +48,7 @@ app.post('/usuario', (req, res) => {
 app.get('/producto', (req, res) => {
   res.render("producto");
 })
-app.get('/producto', (req, res) => {
+app.post('/producto', (req, res) => {
   console.log(req.body);
   if (req.body.nombre && req.body.precio){
     const statement =db.prepare("INSERT INTO productos (nombre, precio) VALUES(?,?)")
