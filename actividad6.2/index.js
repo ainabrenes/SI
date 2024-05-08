@@ -35,7 +35,10 @@ app.post("/usuario", (req, res) => {
   //usuarioId= req.query.id;
   //const row =db.prepare ("SELECT * from usuarios WHERE id=?").get(usuarioId);
   //res.json(row)
-  
+  try{
+    if (!req.body.name || !req.body.email){
+      throw new Error("Por favor, completa todos los campos.");
+    }
   console.log(req.body);
   if (req.body.name && req.body.email){
     const statement =db.prepare("INSERT INTO usuarios (nombre,email) VALUES(?,?)")
@@ -44,12 +47,20 @@ app.post("/usuario", (req, res) => {
    console.log(info);
   }
   res.redirect("usuario");
+}catch(error){
+    console.error(error);
+    res.status(400).send(error.message);
+}
 }) 
 //productos
 app.get('/producto', (req, res) => {
   res.render("producto");
 })
 app.post('/producto', (req, res) => {
+  try{
+    if (!req.body.name || !req.body.precio || req.body.precio<0){
+      throw new Error("Por favor, completa todos los campos.");
+    }
   console.log(req.body);
   if (req.body.name && req.body.precio){
     const statement =db.prepare("INSERT INTO productos (nombre, precio) VALUES(?,?)")
@@ -57,6 +68,10 @@ app.post('/producto', (req, res) => {
     console.log(info);
   }
   res.redirect("producto");
+}catch(error){
+  console.error(error);
+  res.status(400).send(error.message);
+}
 })
 //comandas
 app.get('/comandas', (req, res) => {
@@ -68,9 +83,6 @@ app.get('/comanda', (req, res) => {
   const rows =db.prepare ("SELECT * from comandas WHERE id=?").get(comandaId);
   res.json(rows)
 })
-
-
-
 
 
 app.listen(port, () => {
