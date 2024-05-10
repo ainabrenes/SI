@@ -20,9 +20,14 @@ app.get("/",(req, res)=>{
 
 //usuarios
 app.get('/usuarios', (req, res) => {
-    const rows =db.prepare ("SELECT * from usuarios").all();
-    res.json(rows)
-  })
+  const rows =db.prepare ("SELECT * from usuarios").all();
+  res.render(rows)
+})
+app.get('/productos', (req, res) => {
+  const rows =db.prepare ("SELECT * from productos").all();
+  res.render(rows)
+})
+
 
 //el render de la vista con un form
 app.get("/usuario", (req, res) => {
