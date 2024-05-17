@@ -1,0 +1,6 @@
+<%- include("header") %>
+<h1>Lista Productos</h1>
+    <% msgs.forEach ((producto, index)=>{ %>
+        <p><%= producto.nombre %></p>
+    <% }) %>
+<%- include("footer") %>

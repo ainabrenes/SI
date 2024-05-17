@@ -1,0 +1,7 @@
+<%- include("header") %>
+    <h1>Lista Usuarios</h1>
+    <% msgs.forEach ((usuario, index)=>{ %>
+        <p><%= usuario.nombre %></p>
+    <% }) %>
+
+<%- include("footer") %>

@@ -53,7 +53,7 @@ app.post("/usuario", (req, res) => {
   }
   res.redirect("usuario");
 }catch(error){
-    console.error(error);
+   
     res.status(400).send(error.message);
 }
 }) 
@@ -79,6 +79,27 @@ app.post('/producto', (req, res) => {
 }
 })
 //comandas
+app.get('/comanda', (req, res) => {
+  res.render("comanda");
+})
+app.post('/comanda', (req, res) => {
+  try{
+    if (!req.body.name || !req.body.precio || req.body.precio<0){
+      throw new Error("Por favor, completa todos los campos.");
+    }
+  console.log(req.body);
+  if (req.body.name && req.body.precio){
+    const statement =db.prepare("INSERT INTO comandas (nombre, precio) VALUES(?,?)")
+    const info =statement.run(req.body.name,req.body.precio);
+    console.log(info);
+  }
+  res.redirect("comanda");
+}catch(error){
+  
+  res.status(400).send(error.message);
+}
+})
+//comandas
 app.get('/comandas', (req, res) => {
   const rows =db.prepare ("SELECT * from comandas").all();
   res.json(rows)
@@ -90,6 +111,20 @@ app.get('/comanda', (req, res) => {
 })
 
 
+//lista usuarios
+app.get('/listausuarios',(req,res)=>{
+  const rows =db.prepare("SELECT * from usuarios").all();
+  res.render("listausuarios",msgs=rows)
+})
+//lista productos
+app.get('/listaproductos',(req,res)=>{
+  const rows =db.prepare("SELECT * from productos").all();
+  res.render("listaproductos",msgs=rows)
+})
+
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
