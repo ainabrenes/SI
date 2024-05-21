@@ -3,4 +3,7 @@
     <% msgs.forEach ((producto, index)=>{ %>
         <p><%= producto.nombre %></p>
     <% }) %>
+    <form action="/producto" method="post">
+        <a class="btn btn-primary" href="/producto" role="button">Añadir Producto</a>
+    </form>
 <%- include("footer") %>

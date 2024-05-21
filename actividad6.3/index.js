@@ -27,7 +27,11 @@ app.get('/productos', (req, res) => {
   const rows =db.prepare ("SELECT * from productos").all();
   res.render(rows)
 })
-
+//comandas
+app.get('/comandas', (req, res) => {
+  const rows =db.prepare ("SELECT * from comandas").all();
+  res.json(rows)
+})
 
 //el render de la vista con un form
 app.get("/usuario", (req, res) => {
@@ -84,13 +88,13 @@ app.get('/comanda', (req, res) => {
 })
 app.post('/comanda', (req, res) => {
   try{
-    if (!req.body.name || !req.body.precio || req.body.precio<0){
+    if (!req.body.usuario_id || !req.body.producto_id){
       throw new Error("Por favor, completa todos los campos.");
     }
   console.log(req.body);
-  if (req.body.name && req.body.precio){
-    const statement =db.prepare("INSERT INTO comandas (nombre, precio) VALUES(?,?)")
-    const info =statement.run(req.body.name,req.body.precio);
+  if (req.body.usuario_id && req.body.producto_id){
+    const statement =db.prepare("INSERT INTO comandas (usuario_id, producto_id) VALUES(?,?)")
+    const info =statement.run(req.body.usuario_id,req.body.producto_id);
     console.log(info);
   }
   res.redirect("comanda");
@@ -98,16 +102,6 @@ app.post('/comanda', (req, res) => {
   
   res.status(400).send(error.message);
 }
-})
-//comandas
-app.get('/comandas', (req, res) => {
-  const rows =db.prepare ("SELECT * from comandas").all();
-  res.json(rows)
-})
-app.get('/comanda', (req, res) => {
-  comandaId= req.query.id;
-  const rows =db.prepare ("SELECT * from comandas WHERE id=?").get(comandaId);
-  res.json(rows)
 })
 
 
@@ -121,8 +115,23 @@ app.get('/listaproductos',(req,res)=>{
   const rows =db.prepare("SELECT * from productos").all();
   res.render("listaproductos",msgs=rows)
 })
-
-
+//lista comandas
+app.get('/listacomandas',(req,res)=>{
+  const rows =db.prepare("SELECT * from comandas").all();
+  res.render("listacomandas",msgs=rows)
+})
+/*
+app.get("/usuarioUpdate",(req,res)=>{
+  usuarioId=req.query.id;
+  const row= db.prepare("SELECT * from usuarios where id=?").get(usuarioId);
+  res.render("personaAdd",{persona:row});
+})
+app.post("/usuarioUpdate",(req,res)=>{
+  usuarioId=req.query.id;
+  const row= db.prepare("SELECT * from usuarios where id=?").get(usuarioId);
+  res.render("personaAdd",{persona:row});
+})
+*/
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

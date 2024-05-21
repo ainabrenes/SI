@@ -3,5 +3,8 @@
     <% msgs.forEach ((usuario, index)=>{ %>
         <p><%= usuario.nombre %></p>
     <% }) %>
+    <form action="/usuario" method="post">
+        <a class="btn btn-primary" href="/usuario" role="button">Añadir Usuario</a>
+    </form>
 
 <%- include("footer") %>

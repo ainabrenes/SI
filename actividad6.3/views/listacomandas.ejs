@@ -1,0 +1,10 @@
+<%- include("header") %>
+    <h1>Lista Comanda</h1>
+    <% msgs.forEach ((comanda, index)=>{ %>
+        <p><%= comanda.id %></p>
+    <% }) %>
+    
+    <form action="/comanda" method="post">
+        <a class="btn btn-primary" href="/comanda" role="button">Añadir Comanda</a>
+    </form>
+<%- include("footer") %>
