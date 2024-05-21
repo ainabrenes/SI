@@ -120,6 +120,11 @@ app.get('/listacomandas',(req,res)=>{
   const rows =db.prepare("SELECT * from comandas").all();
   res.render("listacomandas",msgs=rows)
 })
+
+app.get('/detallesusuario',(req,res)=>{
+  //const usuarioId=
+
+})
 /*
 app.get("/usuarioUpdate",(req,res)=>{
   usuarioId=req.query.id;
