@@ -1,5 +1,5 @@
 <%- include("usuarios") %>
     <% msgs.forEach ((usuario, index)=>{ %>
-        <p><%= usuario.nombre %></p>
+        <p><a href="/detallesusuarios?ID=<%= usuario.ID %>"><%= usuario.nombre %></a></p>
     <% }) %>
 <%- include("footer") %>

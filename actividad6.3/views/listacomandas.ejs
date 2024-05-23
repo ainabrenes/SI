@@ -1,7 +1,7 @@
 <%- include("header") %>
     <h1>Lista Comanda</h1>
     <% msgs.forEach ((comanda, index)=>{ %>
-        <p><%= comanda.id %></p>
+        <p><a href="/detallescomandas?ID=<%= comanda.ID %>"><%= comanda.id %></a></p>
     <% }) %>
     
     <form action="/comanda" method="post">

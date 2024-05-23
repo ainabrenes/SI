@@ -1,7 +1,7 @@
 <%- include("header") %>
     <h1>Lista Usuarios</h1>
     <% msgs.forEach ((usuario, index)=>{ %>
-        <p><%= usuario.nombre %></p>
+        <p><a href="/detallesusuarios?ID=<%= usuario.ID %>"><%= usuario.nombre %></a></p>
     <% }) %>
     <form action="/usuario" method="post">
         <a class="btn btn-primary" href="/usuario" role="button">Añadir Usuario</a>

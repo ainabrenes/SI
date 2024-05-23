@@ -1,7 +1,7 @@
 <%- include("header") %>
 <h1>Lista Productos</h1>
     <% msgs.forEach ((producto, index)=>{ %>
-        <p><%= producto.nombre %></p>
+        <p><a href="/detallesproductos?ID=<%= producto.ID %>"><%= producto.nombre %></a></p>
     <% }) %>
     <form action="/producto" method="post">
         <a class="btn btn-primary" href="/producto" role="button">Añadir Producto</a>
