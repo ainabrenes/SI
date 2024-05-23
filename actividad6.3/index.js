@@ -121,8 +121,13 @@ app.get('/listacomandas',(req,res)=>{
   res.render("listacomandas",msgs=rows)
 })
 
-app.get('/detallesusuario',(req,res)=>{
-  //const usuarioId=
+app.get('/detallesusuarios',(req,res)=>{
+ usuarioId= req.query.id;
+ console.log("req.query"+req.query);
+  const row =db.prepare ("SELECT * from usuarios WHERE id=?").get(usuarioId);
+  console.log("row"+row)
+    res.render('detalles',{usuario:row});
+
 
 })
 /*
