@@ -123,13 +123,31 @@ app.get('/listacomandas',(req,res)=>{
 
 app.get('/detallesusuarios',(req,res)=>{
  usuarioId= req.query.id;
- console.log("req.query"+req.query);
   const row =db.prepare ("SELECT * from usuarios WHERE id=?").get(usuarioId);
-  console.log("row"+row)
-    res.render('detalles',{usuario:row});
+  res.render('detallesusuarios',{usuario:row});
 
 
 })
+app.get('/detallesproducto',(req,res)=>{
+  producto_id= req.query.id;
+   const row =db.prepare ("SELECT * from productos WHERE id=?").get(producto_id);
+   res.render('detallesproducto',{producto:row});
+ 
+ 
+ })
+ app.get('/detallescomanda',(req,res)=>{
+  comandaId= req.query.id;
+   const row =db.prepare ("SELECT * from comandas WHERE id=?").get(comandaId);
+   res.render('detallescomanda',{comanda:row});
+ 
+ 
+ })
+
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
 /*
 app.get("/usuarioUpdate",(req,res)=>{
   usuarioId=req.query.id;
@@ -142,8 +160,3 @@ app.post("/usuarioUpdate",(req,res)=>{
   res.render("personaAdd",{persona:row});
 })
 */
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
-

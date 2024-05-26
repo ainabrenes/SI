@@ -3,7 +3,7 @@
     <% msgs.forEach ((usuario, index)=>{ %>
         <p><a href="/detallesusuarios?ID=<%= usuario.ID %>"><%= usuario.nombre %></a></p>
     <% }) %>
-    <form action="/usuario" method="post">
+    <form action="/usuario" method="get">
         <a class="btn btn-primary" href="/usuario" role="button">Añadir Usuario</a>
     </form>
 
