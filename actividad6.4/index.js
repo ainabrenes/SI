@@ -82,9 +82,11 @@ app.post('/producto', (req, res) => {
   res.status(400).send(error.message);
 }
 })
-//comandas
+//comandas añadir
 app.get('/comanda', (req, res) => {
-  res.render("comanda");
+  const usuarios = db.prepare("SELECT * FROM usuarios").all();
+  const productos = db.prepare("SELECT * FROM productos").all();
+  res.render('comanda', { usuarios: usuarios, productos: productos });
 })
 app.post('/comanda', (req, res) => {
   try{
