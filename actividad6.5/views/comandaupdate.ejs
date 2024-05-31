@@ -1,0 +1,18 @@
+<%- include("header") %>
+<form action="/comandaUpdate" method="post">
+  <input type="hidden" name="id" value="<%= comanda.id %>">
+  <label for="usuario_id">Usuario </label>
+  <select name="usuario_id" id="usuario_id" class="form-select" aria-label="Default select example">
+    <% usuarios.forEach(function(usuario) { %>
+      <option value="<%= usuario.id %>" <%= comanda.usuario_id === usuario.id ? 'selected' : '' %>><%= usuario.nombre %></option>
+    <% }); %>
+  </select><br>
+  <label for="producto_id">Producto </label>
+  <select name="producto_id" id="producto_id" class="form-select" aria-label="Default select example">
+    <% productos.forEach(function(producto) { %>
+      <option value="<%= producto.id %>" <%= comanda.producto_id === producto.id ? 'selected' : '' %>><%= producto.nombre %></option>
+    <% }); %>
+  </select><br>
+  <button type="submit">Actualizar</button>
+</form>
+<%- include("footer") %>

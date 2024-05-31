@@ -1,0 +1,10 @@
+<%- include("header") %>
+<form action="/usuarioUpdate" method="post">
+  <input type="hidden" name="id" value="<%= usuario.id %>">
+  <label for="nombre">Nombre </label>
+  <input type="text" name="name" id="nombre" value="<%= usuario.nombre %>">
+  <label for="email">Email </label>
+  <input type="email" name="email" id="email" value="<%= usuario.email %>">
+  <button type="submit">Actualizar</button>
+</form>
+<%- include("footer") %>
