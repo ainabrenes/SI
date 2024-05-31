@@ -1,0 +1,10 @@
+<%- include("header") %>
+<form action="/productoUpdate" method="post">
+  <input type="hidden" name="id" value="<%= producto.id %>">
+  <label for="nombre">Nombre </label>
+  <input type="text" name="name" id="nombre" value="<%= producto.nombre %>">
+  <label for="precio">Precio </label>
+  <input type="number" name="precio" id="precio" value="<%= producto.precio %>">
+  <button type="submit">Actualizar</button>
+</form>
+<%- include("footer") %>

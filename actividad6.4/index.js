@@ -145,6 +145,78 @@ app.get('/detallesproducto',(req,res)=>{
  
  })
 
+ app.get('/productoUpdate', (req, res) => {
+  const productoId = req.query.id;
+  const row = db.prepare("SELECT * FROM productos WHERE id=?").get(productoId);
+  res.render('productoUpdate', { producto: row });
+});
+
+app.post('/productoUpdate', (req, res) => {
+  try {
+    const { id, name, precio } = req.body;
+    if (!id || !name || !precio || precio < 0) {
+      throw new Error("completa todos los campos ");
+    }
+    const statement = db.prepare("UPDATE productos SET nombre=?, precio=? WHERE id=?");
+    const info = statement.run(name, precio, id);
+    console.log(info);
+    res.redirect('/listaproductos');
+  } catch (error) {
+    console.error(error);
+    res.status(400).send(error.message);
+  }
+});
+
+
+app.get('/usuarioUpdate', (req, res) => {
+  const usuarioId = req.query.id;
+  const row = db.prepare("SELECT * FROM usuarios WHERE id=?").get(usuarioId);
+  res.render('usuarioUpdate', { usuario: row });
+});
+
+app.post('/usuarioUpdate', (req, res) => {
+  try {
+    const { id, name, email } = req.body;
+    if (!id || !name || !email) {
+      throw new Error(" completa todos los campos.");
+    }
+    const statement = db.prepare("UPDATE usuarios SET nombre=?, email=? WHERE id=?");
+    const info = statement.run(name, email, id);
+    console.log(info);
+    res.redirect('/listausuarios');
+  } catch (error) {
+    console.error(error);
+    res.status(400).send(error.message);
+  }
+});
+
+
+app.get('/comandaUpdate', (req, res) => {
+  const comandaId = req.query.id;
+  const row = db.prepare("SELECT * FROM comandas WHERE id=?").get(comandaId);
+  const usuarios = db.prepare("SELECT * FROM usuarios").all();
+  const productos = db.prepare("SELECT * FROM productos").all();
+  res.render('comandaUpdate', { comanda: row, usuarios: usuarios, productos: productos });
+});
+
+app.post('/comandaUpdate', (req, res) => {
+  try {
+    const { id, usuario_id, producto_id } = req.body;
+    if (!id || !usuario_id || !producto_id) {
+      throw new Error("completa todos los campos.");
+    }
+    const statement = db.prepare("UPDATE comandas SET usuario_id=?, producto_id=? WHERE id=?");
+    const info = statement.run(usuario_id, producto_id, id);
+    console.log(info);
+    res.redirect('/listacomandas');
+  } catch (error) {
+    console.error(error);
+    res.status(400).send(error.message);
+  }
+});
+
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
